@@ -16,6 +16,13 @@ GIT
       responders (~> 2.0)
       seo_meta (~> 3.0, >= 3.0.0)
 
+PATH
+  remote: vendor/extensions
+  specs:
+    refinerycms-tutorial_steps (1.0)
+      acts_as_indexed (~> 0.8.0)
+      refinerycms-core (~> 4.0.1)
+
 GEM
   remote: https://rubygems.org/
   remote: https://rails-assets.org/
@@ -297,6 +304,7 @@ GEM
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
       railties (>= 4.2.0, < 5.3)
+    rmagick (2.16.0)
     roo (2.7.1)
       nokogiri (~> 1)
       rubyzip (~> 1.1, < 2.0.0)
@@ -415,7 +423,9 @@ DEPENDENCIES
   refinerycms (~> 4.0, >= 4.0.1)
   refinerycms-authentication-devise (~> 2.0)
   refinerycms-blog!
+  refinerycms-tutorial_steps!
   refinerycms-wymeditor (~> 2.0, >= 2.0.0)
+  rmagick (~> 2.16)
   roo (~> 2.7.1)
   rspec-rails (~> 3.7, >= 3.7.2)
   rubocop (~> 0.52.1)

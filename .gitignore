@@ -51,3 +51,4 @@ refinerycms-*.gem
 
 # Mac
 .DS_Store
+dragonfly.log

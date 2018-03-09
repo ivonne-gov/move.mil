@@ -169,3 +169,6 @@ end
 
 # Added by Refinery CMS Blog engine
 Refinery::Blog::Engine.load_seed
+
+# Added by Refinery CMS TutorialSteps extension
+Refinery::TutorialSteps::Engine.load_seed

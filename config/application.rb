@@ -30,5 +30,8 @@ module MoveMil
 
     # Custom error pages
     config.exceptions_app = routes
+
+    config.action_view.sanitized_allowed_tags = %w( iframe )
+    config.action_view.sanitized_allowed_attributes = %w( src width height frameborder webkitAllowFullScreen mozallowfullscreen allowFullScreen )
   end
 end

@@ -34,6 +34,8 @@ gem 'refinerycms-blog', git: 'https://github.com/refinery/refinerycms-blog', bra
 gem 'dragonfly', '~> 1.1', '>= 1.1.4'
 # Adds WYMeditor support to Refinery CMS for visual editing
 gem 'refinerycms-wymeditor', ['~> 2.0', '>= 2.0.0']
+# RMagick is an interface between Ruby and ImageMagick.
+gem 'rmagick', '~> 2.16'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-html5shiv', '3.7.3'
@@ -59,3 +61,5 @@ group :test do
   gem 'simplecov', '~> 0.15.1', require: false
   gem 'simplecov-console', '~> 0.4.2', require: false
 end
+
+gem 'refinerycms-tutorial_steps', path: 'vendor/extensions'

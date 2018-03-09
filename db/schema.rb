@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180308042027) do
+ActiveRecord::Schema.define(version: 20180308231754) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -369,6 +369,41 @@ ActiveRecord::Schema.define(version: 20180308042027) do
     t.string "slug"
     t.string "title"
     t.index ["name"], name: "index_refinery_settings_on_name"
+  end
+
+  create_table "refinery_tutorial_steps", force: :cascade do |t|
+    t.text "content"
+    t.integer "image_id"
+    t.text "pro_tip"
+    t.integer "position"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "tutorial_id"
+  end
+
+  create_table "refinery_tutorial_steps_tutorials", force: :cascade do |t|
+    t.string "title"
+    t.string "description"
+    t.integer "position"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "refinery_tutorials", force: :cascade do |t|
+    t.string "title"
+    t.string "description"
+    t.integer "position"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "refinery_tutorials_tutorial_steps", force: :cascade do |t|
+    t.text "content"
+    t.integer "image_id"
+    t.text "pro_tip"
+    t.integer "position"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "seo_meta", id: :serial, force: :cascade do |t|
