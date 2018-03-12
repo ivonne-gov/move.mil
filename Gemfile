@@ -20,10 +20,14 @@ gem 'puma', '~> 3.11', '>= 3.11.2'
 gem 'rails', '~> 5.1', '>= 5.1.5'
 gem 'roo', '~> 2.7.1', require: false
 gem 'sass', '~> 3.5', '>= 3.5.5'
-gem 'sass-rails', '~> 5.0', '>= 5.0.7'
+gem 'sass-rails', '~> 5.0', '= 5.0.6'
 gem 'uglifier', '~> 4.1', '>= 4.1.6'
 gem 'uswds-rails', '~> 1.4', '>= 1.4.6'
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'
+# camaleon csm
+gem "camaleon_cms",  '>= 2.4.5'
+# Draper adds an object-oriented layer of presentation logic to your Rails apps.
+gem 'draper', '~> 3.0', '>= 3.0.1'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-html5shiv', '3.7.3'
@@ -49,3 +53,8 @@ group :test do
   gem 'simplecov', '~> 0.15.1', require: false
   gem 'simplecov-console', '~> 0.4.2', require: false
 end
+
+
+#################### Camaleon CMS include all gems for plugins and themes #################### 
+require './lib/plugin_routes' 
+instance_eval(PluginRoutes.draw_gems)

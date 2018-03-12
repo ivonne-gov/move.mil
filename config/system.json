@@ -1,0 +1,11 @@
+{
+  "share_sessions": true,
+  "default_user_role": "client",
+  "users_share_sites": false,
+  "db_prefix": "cms_",
+  "relative_url_root": "blog",
+  "auto_include_migrations": false, 
+  "hooks": {}
+}
+
+// Note: after any change in this file, you need to restart your server to apply changes.
