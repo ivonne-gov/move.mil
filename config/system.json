@@ -3,8 +3,8 @@
   "default_user_role": "client",
   "users_share_sites": false,
   "db_prefix": "cms_",
-  "relative_url_root": "blog",
-  "auto_include_migrations": false, 
+  "relative_url_root": "",
+  "auto_include_migrations": false,
   "hooks": {}
 }
 
