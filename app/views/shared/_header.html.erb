@@ -1,0 +1,71 @@
+<div id="top">
+  <%= link_to 'Skip to main content', '#main-content', class: 'usa-skipnav' %>
+</div>
+<header class="usa-header usa-header-extended" role="banner">
+  <div class="usa-banner">
+    <div class="usa-accordion">
+      <div class="usa-banner-header">
+        <div class="usa-grid usa-banner-inner">
+          <%= image_tag 'uswds/favicons/favicon-57.png', alt: 'U.S. flag' %>
+          <p>An official website of the United States government</p>
+          <button aria-controls="gov-banner" aria-expanded="false" class="usa-accordion-button usa-banner-button">
+            <span class="usa-banner-button-text">Here’s how you know</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="usa-banner-content usa-grid usa-accordion-content" id="gov-banner">
+        <div class="usa-banner-guidance-gov usa-width-one-half">
+          <%= image_tag 'uswds/icon-dot-gov.svg', alt: 'Dot gov', class: 'usa-banner-icon usa-media_block-img' %>
+          <div class="usa-media_block-body">
+            <p>
+              <b>The .mil means it’s official.</b>
+              <br>
+              Federal government websites often end in .gov or .mil. Before sharing sensitive information, make sure you’re on a federal government site.
+            </p>
+          </div>
+        </div>
+        <div class="usa-banner-guidance-ssl usa-width-one-half">
+          <%= image_tag 'uswds/icon-https.svg', alt: 'SSL', class: 'usa-banner-icon usa-media_block-img' %>
+          <div class="usa-media_block-body">
+            <p>
+              <b>The site is secure.</b>
+              <br>
+              The <b>https://</b> ensures that you are connecting to the official website and that any information you provide is encrypted and transmitted securely.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="archive-banner">
+    <div class="usa-grid">
+      <p><b>Welcome to the new <%= t('site.name') %>!</b> Can’t find what you’re looking for? Legacy content can be found at <%= link_to 'archive.move.mil', 'https://archive.move.mil' %>.</p>
+    </div>
+  </div>
+
+  <div class="usa-navbar">
+    <%= raw('<button class="usa-menu-btn">Menu</button>') %>
+
+    <div class="usa-logo" id="logo">
+      <%= link_to root_path, 'aria-label': 'Home', rel: 'home' do %>
+        <%= image_tag 'emblems/ustranscom.svg', alt: 'United States Transportation Command emblem', class: 'header-transcom-logo' %>
+        <em class="usa-logo-text">
+          <%= t('site.name') %>
+          <span> <%= raw t('site.tagline', abbr: abbr_tag('dod')) %></span>
+        </em>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="navbar-border"></div>
+
+  <%- if current_page?(root_path) %>
+    <section class="usa-hero">
+      <%= render 'shared/nav' %>
+    </section>
+  <%- else %>
+    <%= render 'shared/nav' %>
+  <%- end -%>
+</header>

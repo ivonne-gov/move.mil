@@ -1,15 +1,12 @@
-<!doctype html>
-<html lang="<%= I18n.locale %>">
+<!DOCTYPE html>
+<html lang="en">
 <%= render 'shared/head' %>
 <body>
   <%= render 'shared/header' %>
   <div class="usa-overlay"></div>
-
   <main id="main-content" role="main">
     <%= yield %>
   </main>
-
-<%= render 'shared/footer' %>
-
+  <%= render 'shared/footer' %>
 </body>
 </html>
